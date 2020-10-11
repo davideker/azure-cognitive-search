@@ -1,0 +1,43 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "deploy blueprint",
+            "type": "shell",
+            "windows": {
+                "command": "az",
+                "args": [
+                    "deployment",
+                    "sub",
+                    "create",
+                    "--name",
+                    "azure-search-deployment",
+                    "--location",
+                    "East US",
+                    "--template-file",
+                    "./Blueprints/azuredeploy.json",
+                    "--parameters",
+                    "rgName=azure-search-resourcegroup",
+                    "rgLocation='East US'"
+                ]
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "destroy",
+            "type": "shell",
+            "windows": {
+                "command": "az",
+                "args": [
+                    "deployment",
+                    "sub",
+                    "delete",
+                    "--name",
+                    "azure-search-deployment"
+                ]
+            }
+        }
+    ]
+}
