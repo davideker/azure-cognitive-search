@@ -7,11 +7,14 @@ $Hash = $Hash.ToLower() -replace '-', ''
 $Name =  'powershellAutomation' + $Hash
 $RGName = 'powershell-automation-' + $Hash
 
+$Region = Read-Host 'Enter Your Region'
 $TenantId = Read-Host 'Enter Your TenantId' 
-$Region = Read-Host 'Enter Your Region' 
+$SubscriptionId = Read-Host 'Enter Your SubscriptionId' 
+ 
 Connect-AzureAD -TenantId $TenantId
+Connect-AzAccount -TenantId $TenantId -Subscription $SubscriptionId
 
-New-AzResourceGroup -Name $RGName -Location $Region #EastUS
+New-AzResourceGroup -Name $RGName -Location $Region 
 $ADObject = New-AzUserAssignedIdentity -Name $Name -ResourceGroupName $RGName 
 Write-Debug $ADObject
 
