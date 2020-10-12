@@ -19,8 +19,8 @@
                     "--template-file",
                     "./Blueprints/azuredeploy.json",
                     "--parameters",
-                    "rgName=azure-search-resourcegroup",
-                    "rgLocation='East US'"
+                    "resourcegroupName=azure-search-resourcegroup",
+                    "location='EastUS'"
                 ]
             },
             "problemMatcher": []
