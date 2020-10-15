@@ -61,3 +61,5 @@ The Resources provisioned in this ARM Template are meant to illustrate how the C
 - [Configuring the Indexer for different document types](https://docs.microsoft.com/en-us/azure/search/search-howto-indexing-azure-blob-storage) 
 - [Scheduling the Indexer](https://docs.microsoft.com/en-us/azure/search/search-howto-schedule-indexers) 
 - [Adding a Knowledge Store](https://docs.microsoft.com/en-us/azure/search/cognitive-search-working-with-skillsets#:~:text=knowledge%20store)
+- [Backup and Restore a Search Index](https://docs.microsoft.com/en-us/samples/azure-samples/azure-search-dotnet-samples/azure-search-backup-restore-index/)
+- [Rebuild a Search Index](https://docs.microsoft.com/en-us/azure/search/search-howto-reindex)
